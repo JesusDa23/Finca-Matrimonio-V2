@@ -1,0 +1,64 @@
+.container-menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5em;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  margin-top: .5em;
+  font-weight: bolder;
+}
+
+.menu {
+    margin: 1em auto;
+    width: 90%;
+    font-family: 'Poppins Regular';
+}
+
+.btn.total {
+  display: flex;
+  justify-content: space-between; /* Distribuye los elementos a los extremos */
+  align-items: center; /* Alinea verticalmente los elementos */
+  border: 1px solid #ccc;
+}
+
+.total-container {
+  display: flex;
+  align-items: center; /* Alinea verticalmente los elementos dentro de total-container */  
+}
+
+.total-label {
+  margin-left: .5em;
+  margin-right: 10px;
+  margin-bottom: 0em;
+  font-weight: bold;
+}
+
+.total-amount {
+  font-weight: bold;
+  color: #007bff; /* Color del monto */
+  margin-bottom: 0em;
+}
+
+
+@media ( max-width: 368px ) {
+  .container-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menuProducts{
+    width: 85px;
+    height: 75px;
+}
+}
+
+@media (max-width: 768px ) {
+  .container-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+}

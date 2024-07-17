@@ -1,0 +1,73 @@
+
+
+
+.cardService {
+    display: flex;
+    justify-content:center;
+    margin: 1em;
+    gap: 3em;
+    background-image: linear-gradient(
+        rgb(255, 255, 255),
+        rgba(255, 255, 255, 0.5)),
+        url('../../../../assets/imagenes/fondo3.png');
+    flex-wrap: wrap;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img.card-img-top {
+    height: 17rem;
+    object-fit: cover;
+}
+
+.modal-title {
+    font-family: 'Reboto-Bold';
+    font-weight: bold;
+    font-size: 1em;
+}
+
+h5.card-title {
+    display: flex;
+    justify-content: center;
+    font-family: 'Reboto-Bold';
+    font-weight: bold;
+    font-size: 1.6em;
+}
+
+p.card-text {
+    font-family: 'Reboto-Regular';
+    height: auto;
+}
+
+a.btn.btn-primary {
+    display: flex;
+    width: 62%;
+    justify-content: center;
+    font-family: 'Reboto-Regular';
+}
+
+
+@media ( max-width: 576px ) {
+    .cardService{
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+    }
+
+    h5.card-title {
+        font-size: 1.3em;
+    }
+  }
+
+@media (max-width: 801px ) {
+    .cardService{
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+
+    }
+  }

@@ -1,0 +1,26 @@
+p.title-history {
+    font-size: 80px;
+    display:flex ;
+    padding: 5rem ;
+    color: #d8cfbf9a;
+}
+.img-history {
+    background-image: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)),
+        url(../../../../assets/imagenes/historia.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 27px 0;
+}
+
+
+@media (width <= 576px)
+{
+    p.title-history {
+        font-size: 48px;
+        padding: .7em;
+    }
+}

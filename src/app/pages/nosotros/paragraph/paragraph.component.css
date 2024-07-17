@@ -1,0 +1,60 @@
+.contenido {
+    display: flex;
+    padding: 2em;
+    align-items: center;
+}
+
+h2.title-history{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    margin-top: 1.5rem;
+}
+
+iframe.video_historia {
+    width: 42vw;
+    height: 25vw;
+}
+
+.content { 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 5rem 0 0;
+}
+
+
+@media (width <= 768px)
+{
+
+    .contenido {
+        flex-direction: column;
+    }
+
+
+}
+
+@media (width <= 576px)
+{
+    h2.title-history {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+
+    p.content-history {
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    iframe {
+        width: 50vw;
+    }
+
+    iframe.video_historia {
+        width: 70vw;
+        height: 43vw;
+    }
+
+
+}

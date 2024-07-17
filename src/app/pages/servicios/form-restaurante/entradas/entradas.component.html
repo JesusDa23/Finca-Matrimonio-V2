@@ -1,0 +1,29 @@
+<div class="menu">
+  <div class="menu-info">
+    <h4>Entradas</h4>
+    <p>Todos los paquetes incluyen vino, una variedad de 3 tipos de entradas que pueden incluir galletas, gomitas, frutas y canapés, además de decoración sencilla. Para eventos con más de 20 personas, se puede personalizar un paquete según las necesidades específicas del cliente.</p>
+  </div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let entrada of entradas; let i = index">
+            <th scope="row">{{entrada.cantidad}}</th>
+            <td scope="row">{{entrada.name}}</td>
+            <td scope="row">{{entrada.price}}</td>
+            <td scope="row">
+                <a type="button" class="btn btn-success btn-sm rounded-circle m-2" (click)="incrementar(i)"> <i class="fas fa-plus"></i></a>
+                <a type="button" class="btn btn-primary btn-sm" (click)="decrementar(i)"><i class="fas fa-minus"></i></a>
+            </td>
+          </tr>
+        </tbody>
+    </table>
+</div>
+
+

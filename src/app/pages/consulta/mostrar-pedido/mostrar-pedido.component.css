@@ -1,0 +1,72 @@
+.fondo {
+  background-image: linear-gradient(
+  rgb(255, 255, 255),
+  rgba(255, 255, 255, 0.5)),
+  url('../../../../assets/imagenes/fondo3.png');
+}
+
+.container {
+    max-width: 85em;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    font-family: 'Roboto-Bold';
+    font-weight: bold;
+    font-size: 1.7em;
+    color: #333333;
+  }
+
+  h3 {
+    display: flex;
+    justify-content: center;
+}
+  
+  .table {
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  .table th, .table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #dddddd;
+  }
+  
+  .table th {
+    background-color: #16a085; /* Verde claro */
+    color: white;
+  }
+  
+  .table td {
+    background-color: #f9f9f9;
+    color: #333333;
+  }
+  
+  
+  thead {
+    text-align: center;
+    font-family: 'Roboto-Bold';
+    font-weight: bold;
+    font-size: 1em;
+  }
+  
+  tbody {
+    font-family: 'Roboto-Regular';
+  }
+  
+  
+  .error {
+    color: red;
+    height: 1.4em;
+    font-size: 0.9em;
+    margin-left: 1em;
+  }
+  

@@ -1,0 +1,210 @@
+/* estilos del header */
+.footer {
+  font-family: 'Poppins Regular';
+}
+
+
+.content-header {
+    display: flex;
+    align-items: center;
+  }
+
+  header.header {
+    background-color: #f7e5d2;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 5rem;
+  }
+
+  .logo {
+    flex-basis: 20%;
+  }
+
+  img.logo {
+    width: 10.6rem;
+  }
+
+  label.menu-icon {
+    text-align: right;
+    font-size: 2rem;
+  }
+
+  .navmenu {
+    flex-basis: 100%;
+  }
+  /* Oculta la lista del menú por defecto */
+  .menu-list {
+    display: none;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    height: auto;
+    width: 100vw;
+    /* border: 1px dotted orange; */
+    top: 80px;
+    left: 0;
+    text-align: center;
+  }
+
+  .menu-list .menu-item {
+    background-color: #f7e5d2;
+    font-size: 1.2rem;
+  }
+
+  .menu-list .menu-item a {
+    text-decoration: none;
+    display: contents;
+    padding: .3rem .6rem;
+    color: black;
+  }
+
+
+  /* Muestra la lista del menú cuando el checkbox está marcado */
+  .menu-toggle:checked ~ .menu-list {
+    display: block;
+  }
+
+  /* Oculta el input asociado al label que despliega el icono del menu hamburguesa */
+  .visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+  }
+
+  /* Estilos generales del menú */
+  .menu {
+    display: flex;
+    flex-direction: column;
+    /* height: 100%; */
+    overflow: hidden;
+  }
+
+  /* .sub-menu .menu-item {
+      border: 1px dotted blue;
+      box-sizing: border-box;
+  }
+  .sub-menu .menu-item .sub-menu {
+     background-color: orange;
+  } */
+
+  /* Estilos para dispositivos móviles */
+  @media screen and (max-width: 767px) {
+    /* Disposición vertical */
+    .menu {
+      flex-direction: column;
+    }
+
+    /* Estilos para el botón de menú */
+    .menu-icon {
+      display: block;
+    }
+
+    .menu-list {
+      display: none;
+      overflow: auto;
+      height: 100%;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+    }
+
+    .menu-toggle:checked ~ .menu-list {
+      display: flex;
+    }
+
+    /* Estilos para submenús */
+    .sub-menu {
+      display: none;
+    }
+
+    .menu-item:hover .sub-menu {
+      display: flex;
+      flex-direction: column;
+      position: static;
+    }
+  }
+
+  /* Estilos para dispositivos de escritorio */
+  @media screen and (min-width: 768px) {
+    .content-header {
+      align-items: baseline;
+    }
+    /* Disposición horizontal */
+    .menu {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Estilos para el botón de menú */
+    .menu-toggle {
+      display: none;
+    }
+
+    .menu-icon {
+      display: none;
+    }
+
+    /* .menu-list {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+    } */
+    .menu-list {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      list-style: none;
+      gap: 3.8rem;
+      padding: 0;
+      margin: 0 auto;
+      max-width: 66%;
+      width: 100%;
+      position: static;
+      top: 0;
+      left: 0;
+  }
+  /* .menu-list {
+    display: none;
+    list-style: none;
+    padding: 0;
+    position: relative;
+    height: auto;
+    width: 100vw;
+
+    top: 0;
+    left: 0;
+  } */
+
+    /* Estilos para submenús */
+    .sub-menu {
+      position: absolute;
+      z-index: 1;
+      display: none;
+      padding: 0;
+      background-color: #f7e5d2;
+      list-style: none;
+
+    }
+
+    .sub-menu .menu-item a {
+      text-decoration: none;
+      padding: .3rem 1rem;
+      display: block;
+
+  }
+
+    .menu-item:hover .sub-menu {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      width:auto ;
+    }
+  }

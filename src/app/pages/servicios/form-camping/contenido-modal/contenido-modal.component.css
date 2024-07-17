@@ -1,0 +1,12 @@
+.container {
+  text-align: center;
+}
+.pagar{
+  font-size: 2rem;
+}
+.fondo{
+  background-image: linear-gradient(
+  rgb(255, 255, 255),
+  rgba(255, 255, 255, 0.5)),
+  url(../../../../../assets/imagenes/fondo3.png);
+}

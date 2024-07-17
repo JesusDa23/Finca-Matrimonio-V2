@@ -1,0 +1,22 @@
+.form {
+    width: 40%;
+    margin: 0 auto;
+}
+
+input {
+    border-radius: 1em;
+}
+
+label {
+    display: block;
+    font-family: 'Reboto-Regular';
+    margin-left: .5em;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+    height: 1.4em;
+    font-size: 0.9em;
+    margin-left: 1em;
+}

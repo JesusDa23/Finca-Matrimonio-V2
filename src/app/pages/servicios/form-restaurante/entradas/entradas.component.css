@@ -1,0 +1,43 @@
+.menu {
+    margin: 1em auto;
+    width: 90%;
+}
+
+
+table.table {
+  width: 34em;
+}
+
+.menu-info {
+  width: 34em;
+}
+
+h4 {
+  text-align: center;
+  font-weight: bolder;
+}
+
+.menu {
+  margin: 1em auto;
+  width: 90%;
+  font-family: 'Poppins Regular';
+  
+}
+
+.menuProducts {
+  width: 100px; /* Ajusta el ancho según tus necesidades */
+  height: 100px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5rem;
+  object-fit: cover;
+}
+
+.table th, .table td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+a.btn.btn-primary {
+    margin-right: 1em;
+}

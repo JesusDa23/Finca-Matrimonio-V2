@@ -1,0 +1,161 @@
+body{
+  background-image: linear-gradient(
+  rgb(255, 255, 255),
+  rgba(255, 255, 255, 0.5)),
+  url(../../../../assets/imagenes/cafe-fondo.png);
+
+}
+img.d-block.w-100 {
+  border-radius: 10%;
+}
+.quantity-controls {
+  padding: 7%;
+}
+
+p.contenido-coffe {
+  font-family: 'Reboto-Regular';
+}
+
+.quantity[_ngcontent-ng-c2786683902] {
+  margin: 25px;
+  font-size: 20px;
+}
+
+.row.flex-md-row {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  margin-right: 7%;
+  margin-left: 7%;
+  margin-bottom: 4%
+}
+.card1.p-md-4.p-lg-5 {
+  text-align: center;
+}
+
+.container-card2 {
+  display: flex;
+  justify-content: center;
+}
+
+h2.title-coffe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #8f6b3c;
+  font-size: 30px;
+  font-family: 'Reboto-Bold';
+  font-weight: bold;
+}
+
+p.contenido-cafe {
+  margin-right: 7%;
+  margin-left: 7%;
+  margin-bottom: 4%
+}
+
+.cardService {
+  display: flex;
+  justify-content:center;
+  margin: 2em;
+  gap: 3em;
+}
+
+.quantity-button-1 {
+  border-radius: 10%;
+  background-color: #a00000;
+  color: white;
+  border: none;
+  padding: 3%;
+  font-size: 10px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  border: 1px solid #a00000; 
+}
+
+.quantity-button-1:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000; 
+}
+
+.quantity-button-2 {
+  border-radius: 10%;
+  background-color: #007a25;
+  color: white;
+  border: none;
+  padding: 3%;
+  font-size: 10px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  border: 1px solid #007a25;
+}
+
+.quantity-button-2:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #000000; 
+}
+
+.precio {
+  font-family: 'Reboto-Bold';
+  font-weight: bold;
+}
+
+.comprar-button {
+  margin: 5% 10px;
+  background-color: #007a25;
+  color: white;
+  padding: 9px 25%;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  border: 1px solid #007a25; 
+  font-family: 'Reboto-Bold';
+  font-weight: bold;
+}
+
+.comprar-button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black; ;
+    
+}
+
+/* Estilos para la cantidad y el precio total */
+span.quanjtity {
+  font-size: 1em;
+  margin: 1em;
+}
+
+.total-price {
+  font-size: 14px;
+  color: #555;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img.card-img-top {
+  height: 17rem;
+  object-fit: cover;
+
+}
+
+h5.card-title {
+  display: flex;
+  justify-content: center;
+}
+
+p.card-text {
+  height: auto;
+}
+
+a.btn.btn-primary {
+  display: flex;
+  width: 62%;
+  justify-content: center;
+}

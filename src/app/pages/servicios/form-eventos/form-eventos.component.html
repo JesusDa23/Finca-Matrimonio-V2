@@ -1,0 +1,23 @@
+<form (submit)="onFormSubmit($event)" [formGroup]="datosEventos">
+    <p class="title-event">¿Cómo te gustaría que sea tu evento?</p>
+    <div class="mb-3">
+        <textarea formControlName="descripcion" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Describe aquí cómo quieres tu evento (cumpleaños, graduación, boda, etc.)"></textarea>
+    </div>
+
+    <div class="mb-3">
+        <app-form-restaurante [mostrarBtnTotal]="false" (actualizarTotal)="actualizarTotalComida($event)"></app-form-restaurante>
+    </div>
+
+    <div class="mb-3">
+      <app-entradas (actualizarTotal)="recibirEntradas($event)"></app-entradas>
+    </div>
+
+    <div class="btn-total">
+        <div class="total-container">
+            <p class="total-label">Total del evento:</p>
+            <p class="total-amount">{{ calcularTotal() }}</p>
+        </div>
+        <app-total-pago (pagar)="onPagar()"></app-total-pago>
+    </div>
+</form>
+

@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+@font-face {
+    font-family: 'Reboto-Regular';
+    font-size: normal;
+    font-weight: normal;
+    src: local('Reboto-Regular') url('assets/fonts/Roboto/Roboto-Regular.ttf');
+}
+
+
+@font-face {
+    font-family: 'Reboto-Bold';
+    font-size: normal;
+    font-weight: bold;
+    src: local('Reboto-Bold') url('assets/fonts/Roboto/Roboto-Bold.ttf');
+
+}

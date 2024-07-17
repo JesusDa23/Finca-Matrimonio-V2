@@ -1,0 +1,29 @@
+<div class="cardService" >
+  <div class="card" style="width: 20rem" *ngFor="let service of services; let i = index">
+    <img [src]="service.img" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{service.title}}</h5>
+      <p class="card-text">
+        {{service.description}} 
+      </p>
+      <button (click)="recogerId(service.id)" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">{{service.btnText}}</button>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Datos Personales</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <app-main-data></app-main-data>
+      </div>
+    </div>
+  </div>
+</div>

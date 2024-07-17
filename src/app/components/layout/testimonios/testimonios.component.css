@@ -1,0 +1,91 @@
+.container {
+  max-width: 1100px;
+  margin: 1em auto;
+  padding: 20px;
+}
+
+div#carouselTestimonios {
+  margin: 1em;
+}
+
+
+
+/* Estilos para el carrusel de testimonios */
+.testimonios {
+  text-align: center;
+  margin-bottom: 40px;
+
+}
+
+.testimonios__title {
+  font-size: 2rem;
+  margin: 10px;
+  color: #333;
+  font-family: 'Reboto-Bold';
+  font-weight: bold;
+}
+
+.carousel-inner {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item {
+  text-align: left;
+}
+
+.testimonio {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonio:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.testimonio .user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.testimonio .user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.testimonio .starscolor {
+  color: #f39c12;
+  margin-bottom: 10px;
+}
+
+.testimonio blockquote {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #555;
+}
+/* Estilos para los íconos de estrellas */
+.starscolor {
+  color: #f39c12;
+}
+
+/* Media query para ajustar estilos en pantallas pequeñas */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .testimonio {
+    padding: 15px;
+  }
+
+
+}

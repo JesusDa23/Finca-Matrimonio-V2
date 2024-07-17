@@ -1,0 +1,153 @@
+
+
+.img-main {
+    background-image: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)),
+        url( /assets/imagenes/fondohome.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 165px 0 
+}
+
+.titulo-main p {
+    font-size: 3.5em;
+    color: #ffffff;
+    font-weight: 1000;
+    padding: 10px 100px;
+    font-family: 'Reboto-Bold';
+   
+}
+
+.botonReserva {
+  margin-left: 1em;
+}
+
+.main-horario {
+    font-family: 'Reboto-Bold';
+    font-weight: bold;
+    background-color: #f7e5d2;
+}
+
+p.horario-servicio {
+    font-family: 'Reboto-Regular';
+    display: flex;
+    justify-content: center;
+    padding: 0.5em;
+    font-size: 1em;
+    margin: 0;
+}
+
+.boton-consulta {
+    font-size: 20px;
+    border: 3px solid #ffffff;
+    background-color: transparent;
+    font-family: 'Reboto-Regular';
+    margin-right: 1em;
+}
+
+.boton-reserva{
+  font-size: 20px;
+  border: 3px solid #f7e5d2;
+  background-color: #f7e5d2;
+  font-family: "Reboto-Regular";
+  margin-right: 1em;
+  color: black;
+  cursor: pointer; /* Cambia el cursor a mano */
+  transition: background-color 0.3s, transform 0.3s; /* Transición suave */
+}
+
+.boton-reserva:hover {
+  background-color: #d5cfc8; /* Color al pasar el cursor */
+  border:  3px solid #d5cfc8;
+  transform: scale(1.05); /* Aumenta el tamaño ligeramente */
+}
+
+
+.containerbuttons {
+  margin-left: 100px;
+}
+
+
+
+@media (width<=576px) {
+
+  .titulo-main {
+    text-align: center;
+}
+
+.containerbuttons {
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+
+    .img-main {
+      padding: 135px 0;
+  }
+  
+  .titulo-main p {
+    font-size: 1.8em;
+    padding: 42px 16px;
+  }
+  
+  button.btn.btn-primary {
+    margin: 0 46px;
+  }
+  
+  .main-horario {
+    font-size: 18px;
+    padding: 0;
+  }
+  
+  p.horario-servicio {
+    margin-bottom: 0;
+    padding: 0.3em;
+  }
+  
+  .row.flex-md-row {
+    flex-direction: column-reverse;
+  }
+  
+  .card1 {
+    padding: 1rem;
+  
+  
+  }
+}
+  
+  @media ( width<=768px ){
+    .img-main{
+      padding: 176px 0;
+    }
+    .titulo-main p {
+      font-size: 3em;
+    }
+    .row.flex-md-row {
+      flex-direction: column-reverse;
+    }
+  
+    .card1 h2 {
+      font-size: 2em;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .card1 p {
+      font-size: 1.1em;
+    }
+    
+    h2.conatainer-titulo {
+      font-size: 2em;
+      
+    }
+    
+    p.description-container {
+      font-size: 1.1em;
+    
+    }
+}  

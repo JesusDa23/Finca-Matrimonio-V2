@@ -1,0 +1,24 @@
+<body>
+    <app-encabezado></app-encabezado>
+    <h2 class="title-coffe">¿POR QUÉ DEBERÍAS ELEGIR NUESTRO CAFÉ?</h2>
+    <p class="contenido-cafe"> Nuestro café va más allá de ser una simple bebida. Desde la siembra de las semillas hasta que llega a tu taza, cada paso de nuestro proceso está impregnado de dedicación, pasión y un profundo respeto por la tierra. Cultivado en las altas montañas y bañado por el sol tropical, nuestro café captura la esencia misma de nuestro entorno, ofreciendo un sabor y un aroma incomparables. En la Finca Cafetera ‘El Matrimonio’, no solo te ofrecemos café; te invitamos a un viaje sensorial al corazón de nuestra tierra, donde cada taza es una celebración de la vida, la naturaleza y el amor por el buen café.” ☕🌿🌟
+    </p>
+    <app-carrucel-cafe> </app-carrucel-cafe>
+    
+    <div class="container">
+        <div class="cardService" *ngFor="let service of cafes.data; let i = index">
+            <div class="card" style="width: 22rem">
+              <img [src]="service.urlImagen" class="card-img-top" [alt]="service?.nombre" />
+              <div class="card-body">
+                <h5 class="card-title">{{service.nombre}}</h5>
+                <p class="card-text">${{service.precio}}</p>
+                <a class="btn btn-primary" [routerLink]="['/cafe/detalle/', service._id]">Seleccionar</a>
+              </div>
+            </div>
+          </div>
+    </div>
+    
+</body>
+
+    
+

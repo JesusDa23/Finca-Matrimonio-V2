@@ -1,0 +1,65 @@
+<form [formGroup]="mainData">
+
+  <div class="field">
+    <label for="nombreCompleto">Nombre Completo:</label>
+    <input type="text" id="nombreCompleto" class="form-control" formControlName="nombre">
+    <div class="error">
+      <div *ngIf="mainData.get('nombre')?.invalid && (mainData.get('nombre')?.dirty || mainData.get('nombre')?.touched)">
+        <small *ngIf="mainData.get('nombre')?.errors?.['required']">El nombre es requerido</small>
+        <small *ngIf="mainData.get('nombre')?.errors?.['minlength']">El campo requiere mínimo 2 caracteres</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="identificacion">Numero de identificación:</label>
+    <input type="text" id="identificacion" class="form-control" formControlName="cedula">
+    <div class="error">
+      <div *ngIf="mainData.get('cedula')?.invalid && (mainData.get('cedula')?.dirty || mainData.get('cedula')?.touched)">
+        <small *ngIf="mainData.get('cedula')?.errors?.['required']">El número de documento es requerido</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="email">Email:</label>
+    <input type="email" id="email" class="form-control" formControlName="email">
+    <div class="error">
+      <div *ngIf="mainData.get('email')?.invalid && (mainData.get('email')?.dirty || mainData.get('email')?.touched)">
+        <small *ngIf="mainData.get('email')?.errors?.['required']">El email es requerido</small>
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="telefono">Telefono:</label>
+    <input type="tel" id="tel" class="form-control" formControlName="telefono">
+    <div class="error">
+      <div *ngIf="mainData.get('telefono')?.invalid && (mainData.get('telefono')?.dirty || mainData.get('telefono')?.touched)">
+        <small *ngIf="mainData.get('telefono')?.errors?.['required']">El telefono es requerido</small>
+      </div>
+    </div>
+  </div>
+
+  <app-datos-reserva></app-datos-reserva>
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+    <button type="button"  (click)="enviarReserva()" [disabled]="mainData.invalid" class="btn btn-primary" data-bs-dismiss="modal"  >Continuar</button>
+
+  </div>
+</form>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+

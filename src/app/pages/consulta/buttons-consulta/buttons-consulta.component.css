@@ -1,0 +1,44 @@
+.container {
+    font-family: 'Roboto-Bold';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+.button {
+    margin: 0 10px;
+}
+
+button.modificar-button, button.cancel-button {
+    padding: 11px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button.modificar-button {
+    background-color: blue;
+}
+
+button.modificar-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+button.cancel-button {
+    background-color: red;
+    margin-left: 1em;
+}
+
+button.cancel-button:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(1);
+}

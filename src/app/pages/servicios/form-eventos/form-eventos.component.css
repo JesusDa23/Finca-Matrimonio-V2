@@ -1,0 +1,49 @@
+form {
+    margin: 1em 5em;
+}
+
+.title-event {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 23px;
+    margin-bottom: 1em;
+    font-family: 'Reboto-Bold';
+}
+
+textarea#exampleFormControlTextarea1 {
+    width: 74em;
+    margin: 0 auto;
+}
+
+.btn-total {
+  display: flex;
+  justify-content: space-between; /* Distribuye los elementos a los extremos */
+  align-items: center; /* Alinea verticalmente los elementos */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 74em;
+  margin: 0 auto;
+  padding: 6px 12px;
+}
+
+.total-container {
+  display: flex;
+  align-items: center; /* Alinea verticalmente los elementos dentro de total-container */  
+}
+
+.total-label {
+  font-family: 'Reboto-Regular';
+  margin-left: .5em;
+  margin-right: 10px; /* Espacio entre total y monto */
+  margin-bottom: 0em;
+  font-weight: bold;
+
+}
+
+.total-amount {
+  font-family: 'Reboto-Regular';
+  font-weight: bold;
+  color: #007bff; /* Color del monto */
+  margin-bottom: 0em;
+}

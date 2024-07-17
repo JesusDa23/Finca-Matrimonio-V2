@@ -1,0 +1,49 @@
+.photos {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+}
+
+.photo-history {
+    
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+@media (width <= 768px)
+{
+    .photos {
+        flex-direction: row;
+        align-items: center;
+        gap: 1.5em;
+    }
+
+    .photo-history {
+    
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    
+}
+
+@media (width <= 576px)
+{
+    .photos {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5em;
+    }
+
+    .photo-history {
+    
+        width: 5em;
+        height: 5em;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}

@@ -1,0 +1,28 @@
+<!-- <h2>Nuestro menú</h2> -->
+<div class="menu">
+
+  <div class="container-menu">
+    <app-platos
+    [platos]="platos"
+    (incrementarCantidad)="incrementar($event)"
+    (decrementarCantidad)="decrementar($event)"
+  ></app-platos>
+
+  <app-bebidas
+    [bebidas]="bebidas"
+    (incrementarCantidad)="incrementar($event + platos.length)"
+    (decrementarCantidad)="decrementar($event + platos.length)"
+  ></app-bebidas>
+  </div>
+
+
+
+  <div *ngIf="mostrarBtnTotal" class="btn total">
+    <div class="total-container">
+      <p class="total-label">Total:</p>
+      <p class="total-amount">{{ sumarPrecios() }}</p>
+    </div>
+    <button *ngIf="mostrarBotonTotal" class="button" class="btn btn-success" (click)="onPagar2()">
+        <i class="fas fa-credit-card mr-2"></i> Pagar!</button>
+  </div>
+</div>

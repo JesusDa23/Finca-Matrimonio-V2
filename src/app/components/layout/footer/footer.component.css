@@ -1,0 +1,161 @@
+
+/* .testimonios {
+    background-color: rgb(82, 11, 12);
+    gap: 1rem;
+    color: white;
+  } */
+
+  .fondo{
+    background-image: linear-gradient(
+    rgb(11, 11, 11),
+    rgba(137, 53, 53, 0.5)),
+    url(../../../../assets/imagenes/footer.jpg);
+    justify-content: space-around;
+}
+
+p {
+  margin-left: 2rem;
+  color:white;
+}
+
+  .tituloredes {
+    /* margin-right: 3px; */
+    color:white;
+  }
+  .contacto {
+    font-size: 1.1em;
+    margin: 1.2rem;
+    margin-left: -0.8rem;
+    margin-top: 0.9rem;
+  }
+  ul.footer-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items:center;
+  }
+  .footer-menu {
+    display: flex;
+
+    flex-direction: column;
+  }
+
+  h3.tituloredes {
+    display: flex;
+    justify-content: center;
+    font-size: 1.3em;
+    font-family: 'Reboto-Bold';
+    font-weight: bold;
+  }
+
+  ul.menu-social {
+    padding: 0;
+}
+
+  li.menu-social-item{
+    gap: 4rem;
+    display: flex;
+    margin-right: 1.1rem;
+  }
+
+  .imagen{
+    display: flex;
+    height: 8rem;
+    width: 19em;
+  }
+
+  .siguenos {
+    display: flex;
+    justify-content: center;
+  }
+  .nav {
+      display: flex;
+      flex-direction: row;
+      align-items:center;
+
+  }
+  .menu-social-icons {
+    gap: 2rem;
+  }
+
+  .iconnos {
+    font-size: 2em;
+    color:white;
+  }
+
+  .list-testimonios {
+    display: flex;
+    flex-direction: column;
+  }
+
+  p.titulo-footer {
+    font-size: 1.3em;
+    font-family: 'Reboto-Bold';
+    font-weight: bold;
+  }
+
+  .contenido-footer {
+    font-family: 'Reboto-Regular';
+  }
+
+  .imagen.img-matrimonio {
+    height: 100%;
+    width: 100%;
+  }
+
+  .widget {
+    flex-basis: 32%;
+}
+
+
+
+  @media ( max-width: 725px ) {
+
+    .nav {
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 1em;
+  }
+
+  .imagen.img-matrimonio{
+    display: none;
+    margin-bottom: 3em;
+  }
+
+  .widget{
+    text-align: center;
+}
+
+    ul.footer-menu {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      margin-bottom: 6em;
+  }
+
+  }
+
+
+
+
+
+
+  
+
+
+  @media ( min-width: 768px ) {
+
+      .imagen{
+        width: 3rem;
+        height: 3rem;
+      }
+  }
+
+
+  @media (min-width: 801px ) {
+      .ul.footer-menu {
+          align-items:end;
+      }
+  }

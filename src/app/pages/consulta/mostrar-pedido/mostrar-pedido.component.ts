@@ -12,7 +12,7 @@ export class MostrarPedidoComponent implements OnInit {
 
   constructor(private consultaService: ConsultarPedidoService){}
   dataCliente:any;
-  dataReserva:any;
+
   dataPedido: any;
   dataCamping: any;
 
@@ -36,32 +36,23 @@ export class MostrarPedidoComponent implements OnInit {
       if (this.dataCamping == null) {
         // Si los datos de camping son nulos, realizar las primeras consultas
         const data = await Promise.all([
-          this.consultaService.obtenerDatosReserva(this.cedula),
           this.consultaService.obtenerDatosCliente(this.cedula),
           this.consultaService.obtenerDatosPedidos(this.cedula)
         ]);
 
         data[0].subscribe(data => {
-          this.dataReserva = data.data;
-        });
-        data[1].subscribe(data => {
           this.dataCliente = data.data;
         });
-        data[2].subscribe(data => {
+        data[1].subscribe(data => {
           this.dataPedido = data.data;
         });
 
       } else {
         // Si los datos de camping no son nulos, realizar las otras consultas
         const data = await Promise.all([
-          this.consultaService.obtenerDatosReserva(this.cedula),
           this.consultaService.obtenerDatosCliente(this.cedula),
         ]);
-
         data[0].subscribe(data => {
-          this.dataReserva = data.data;
-        });
-        data[1].subscribe(data => {
           this.dataCliente = data.data;
         });
 

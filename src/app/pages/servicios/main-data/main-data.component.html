@@ -41,15 +41,45 @@
     </div>
   </div>
 
-  <app-datos-reserva></app-datos-reserva>
+  <div class="field">
+    <label for="fechaReserva">Selecciona la fecha de tu reserva:</label>
+    <input type="date" id="fechaReserva" class="form-control" formControlName="fechaReserva">
+    <div class="error">
+        <div *ngIf="mainData.get('fechaReserva')?.invalid && (mainData.get('fechaReserva')?.dirty || mainData.get('fechaReserva')?.touched)">
+        <small *ngIf="mainData.get('fechaReserva')?.errors?.['required']">La fecha es requerida</small>
+        </div>
+    </div>
+    </div>
+
+    <div class="field">
+    <label for="horaLlegada">Indica tu hora estimada de llegada:</label>
+    <input type="time" id="horaLlegada" class="form-control" formControlName="horaLlegada">
+    <div class="error">
+        <div *ngIf="mainData.get('horaLlegada')?.invalid && (mainData.get('horaLlegada')?.dirty || mainData.get('horaLlegada')?.touched)">
+        <small *ngIf="mainData.get('horaLlegada')?.errors?.['required']">La hora es requerida</small>
+        </div>
+    </div>
+    </div>
+
+    <div class="field">
+    <label for="cantidadPersonas">Cantidad de Personas:</label>
+    <input type="number" id="cantidadPersonas" class="form-control" formControlName="cantidadPersonas">
+    <div class="error">
+        <div *ngIf="mainData.get('cantidadPersonas')?.invalid && (mainData.get('cantidadPersonas')?.dirty || mainData.get('cantidadPersonas')?.touched)">
+        <small *ngIf="mainData.get('cantidadPersonas')?.errors?.['required']">El número de personas es requerido</small>
+        <small *ngIf="mainData.get('cantidadPersonas')?.errors?.['min']">El campo requiere mínimo 1 persona</small>
+        </div>
+    </div>
+    </div>
+
+
 
   <div class="modal-footer">
     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-    <button type="button"  (click)="enviarReserva()" [disabled]="mainData.invalid" class="btn btn-primary" data-bs-dismiss="modal"  >Continuar</button>
+    <button type="button"  (click)="enviarReserva()"  class="btn btn-primary" data-bs-dismiss="modal"  >Continuar</button>
 
   </div>
 </form>
-
 
   
 

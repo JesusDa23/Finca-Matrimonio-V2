@@ -1,27 +1,22 @@
-<h4>Bebidas</h4>
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Cantidad</th>
-      <th scope="col">Imagen</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Precio</th>
-      <th scope="col">Acciones</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let bebida of bebidas; let i = index">
-      <th scope="row">{{bebida.cantidad}}</th>
-      <td scope="row">
-        <img class="menuProducts" [src]="bebida.urlImage" alt="">
-      </td>
-      <td scope="row">{{bebida.price}}</td>
-      <td scope="row">{{bebida.name}}</td>
-      <td scope="row">
-        <a type="button" class="btn btn-success btn-sm rounded-circle m-2" (click)="incrementar(i)"> <i class="fas fa-plus"></i></a>
-        <a type="button" class="btn btn-primary btn-sm" (click)="decrementar(i)"><i class="fas fa-minus"></i></a>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
+<h3>Bebidas</h3>
+<div class="for"  *ngFor="let bebida of bebidas; let i = index">
+  <div class="card mb-3">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img class="menuProducts" [src]="bebida.urlImage" class="img-fluid rounded-start " alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{bebida.name}}</h5>
+          <p>${{bebida.price}}</p>
+       
+          <div class="botones">
+            <a type="button" class="btn btn-danger btn-sm" (click)="decrementar(i)"><i class="fas fa-minus"></i></a>
+            <p class="card-text">{{bebida.cantidad}}</p>
+            <a type="button" class="btn btn-success btn-sm rounded-circle" (click)="incrementar(i)"> <i class="fas fa-plus"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+</div>

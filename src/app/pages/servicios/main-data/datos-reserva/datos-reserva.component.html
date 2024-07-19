@@ -1,37 +1,4 @@
-
-    <h1>Gestiona tu reserva</h1>
-    <form [formGroup]="datosReserva" (ngSubmit)="enviarReserva()" class="form-container">
-      <div class="field">
-      <label for="fechaReserva">Selecciona la fecha de tu reserva:</label>
-      <input type="date" id="fechaReserva" class="form-control" formControlName="fechaReserva">
-      <div class="error">
-          <div *ngIf="datosReserva.get('fechaReserva')?.invalid && (datosReserva.get('fechaReserva')?.dirty || datosReserva.get('fechaReserva')?.touched)">
-          <small *ngIf="datosReserva.get('fechaReserva')?.errors?.['required']">La fecha es requerida</small>
-          </div>
-      </div>
-      </div>
-  
-      <div class="field">
-      <label for="horaLlegada">Indica tu hora estimada de llegada:</label>
-      <input type="time" id="horaLlegada" class="form-control" formControlName="horaLlegada">
-      <div class="error">
-          <div *ngIf="datosReserva.get('horaLlegada')?.invalid && (datosReserva.get('horaLlegada')?.dirty || datosReserva.get('horaLlegada')?.touched)">
-          <small *ngIf="datosReserva.get('horaLlegada')?.errors?.['required']">La hora es requerida</small>
-          </div>
-      </div>
-      </div>
-  
-      <div class="field">
-      <label for="cantidadPersonas">Cantidad de Personas:</label>
-      <input type="number" id="cantidadPersonas" class="form-control" formControlName="cantidadPersonas">
-      <div class="error">
-          <div *ngIf="datosReserva.get('cantidadPersonas')?.invalid && (datosReserva.get('cantidadPersonas')?.dirty || datosReserva.get('cantidadPersonas')?.touched)">
-          <small *ngIf="datosReserva.get('cantidadPersonas')?.errors?.['required']">El número de personas es requerido</small>
-          <small *ngIf="datosReserva.get('cantidadPersonas')?.errors?.['min']">El campo requiere mínimo 1 persona</small>
-          </div>
-      </div>
-      </div>
-  
+    <!-- <form [formGroup]="datosReserva" (ngSubmit)="enviarReserva()" class="form-container"> -->
 
 
 

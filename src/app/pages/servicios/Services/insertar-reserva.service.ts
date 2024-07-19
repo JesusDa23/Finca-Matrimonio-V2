@@ -16,9 +16,9 @@ export class InsertarReservaService {
     return this.http.post<any>(`${this.baseUrl}/cliente`, nuevaCliente)
   }
 
-  insertarReserva(nuevaReserva:any): Observable<any>{
-    return this.http.post<any>(`${this.baseUrl}/reservas`, nuevaReserva)
-  }
+  // insertarReserva(nuevaReserva:any): Observable<any>{
+  //   return this.http.post<any>(`${this.baseUrl}/reservas`, nuevaReserva)
+  // }
 
   idCard(id: number): void {
     this.selectedServiceId = id;

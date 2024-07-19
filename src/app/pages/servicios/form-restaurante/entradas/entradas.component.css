@@ -1,43 +1,68 @@
-.menu {
-    margin: 1em auto;
-    width: 90%;
-}
-
-
 table.table {
   width: 34em;
 }
 
-.menu-info {
-  width: 34em;
+.container-menu {
+  margin: 1em auto;
+  width: 80%;
+  font-family: 'Poppins Regular';
 }
 
-h4 {
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+h3 {
   text-align: center;
   font-weight: bolder;
 }
 
-.menu {
-  margin: 1em auto;
-  width: 90%;
-  font-family: 'Poppins Regular';
-  
+
+h5 {
+  font-weight: 600;
 }
 
-.menuProducts {
-  width: 100px; /* Ajusta el ancho según tus necesidades */
-  height: 100px;
-  display: block;
-  margin: 0 auto;
-  border-radius: 5rem;
-  object-fit: cover;
-}
-
-.table th, .table td {
-  vertical-align: middle;
-  text-align: center;
-}
 
 a.btn.btn-primary {
     margin-right: 1em;
+}
+
+
+/* new card */
+
+.card.mb-3 {
+    width: 20em;
+}
+
+.col-md-8 {
+  display: flex;
+  align-items: center;
+}
+
+img.img-fluid.rounded-start {
+  height: 9em;
+  width: 15em;
+  object-fit: cover;
+}
+
+p {
+  margin: 0;
+}
+
+
+.botones {
+  display: flex;
+  justify-content: end;
+  gap: 1em;
+  align-items: center;
+}
+
+@media ( max-width: 768px ) {
+
+  .card.mb-3 {
+    width: 15em;
+}
 }

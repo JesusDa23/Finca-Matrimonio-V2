@@ -1,29 +1,30 @@
-<div class="menu">
-  <div class="menu-info">
+<div class="container-menu">
+  <div class="menu">
     <h4>Entradas</h4>
     <p>Todos los paquetes incluyen vino, una variedad de 3 tipos de entradas que pueden incluir galletas, gomitas, frutas y canapés, además de decoración sencilla. Para eventos con más de 20 personas, se puede personalizar un paquete según las necesidades específicas del cliente.</p>
+    <div class="for"  *ngFor="let entrada of entradas; let i = index">
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img class="menuProducts" [src]="entrada.urlImage" class="img-fluid rounded-start " [alt]="entrada?.name">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{entrada.name}}</h5>
+              <p>${{entrada.price}}</p>
+          
+              <div class="botones">
+                <a type="button" class="btn btn-danger btn-sm" (click)="decrementar(i)"><i class="fas fa-minus"></i></a>
+                <p class="card-text">{{entrada.cantidad}}</p>
+                <a type="button" class="btn btn-success btn-sm rounded-circle" (click)="incrementar(i)"> <i class="fas fa-plus"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  
   </div>
-    <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">Cantidad</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Precio</th>
-            <th scope="col">Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let entrada of entradas; let i = index">
-            <th scope="row">{{entrada.cantidad}}</th>
-            <td scope="row">{{entrada.name}}</td>
-            <td scope="row">{{entrada.price}}</td>
-            <td scope="row">
-                <a type="button" class="btn btn-success btn-sm rounded-circle m-2" (click)="incrementar(i)"> <i class="fas fa-plus"></i></a>
-                <a type="button" class="btn btn-primary btn-sm" (click)="decrementar(i)"><i class="fas fa-minus"></i></a>
-            </td>
-          </tr>
-        </tbody>
-    </table>
+  </div>
 </div>
+
 
 

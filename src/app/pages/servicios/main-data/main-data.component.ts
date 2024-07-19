@@ -28,25 +28,25 @@ export class MainDataComponent {
     cedula: ['', [Validators.required]],
     email: ['', [Validators.required]],
     telefono: ['', [Validators.required]],
+    fechaReserva: ['', [Validators.required]],
+    horaLlegada: ['', [Validators.required]],
+    cantidadPersonas: ['', [Validators.required, Validators.min(1)]],
+    // estado: ['', [Validators.required]],
 
   })
+
 
 
   
   enviarReserva (): void {
     if (this.mainData.valid !== null) {
       if (this.mainData.valid) {
+
           this.reservaService.insertarCliente(this.mainData.value).subscribe(
               response => {
                   if (response.ok) {
-                      Swal.fire({
-                          icon: 'success',
-                          title: 'Datos guardados',
-                          text: 'La reserva ha sido guardada exitosamente.'
-                      }).then(() => {
-                          localStorage.setItem( 'cedula', this.mainData.value.cedula )
-                          this.router.navigate(['reservas']);
-                      });
+                    localStorage.setItem('cedula', this.mainData.get('cedula')?.value);
+                    this.mostrarOtroForm();
                   } else {
                       Swal.fire({
                           icon: 'error',
@@ -64,4 +64,35 @@ export class MainDataComponent {
           });
       }
   }
-}}
+}
+
+// gestiona tu reserva
+
+
+
+
+  mostrarOtroForm(): void {
+    const selectedServiceId = this.reservaService.obtenerIdCard()
+
+    if (selectedServiceId !== null) {
+      switch (selectedServiceId) {
+        case 1:
+          this.router.navigate(['/restaurante']);
+          break;
+        case 2:
+          this.router.navigate(['/eventos']);
+          break;
+        case 3:
+          this.router.navigate(['/camping']);
+          break;
+        default:
+          console.log('Service ID no coincide con 1, 2 o 3');
+          break;
+      }
+    } else {
+      console.log('No se ha seleccionado ningún servicio');
+    }
+  }
+
+
+}

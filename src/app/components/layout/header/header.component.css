@@ -115,6 +115,7 @@
 
     .menu-toggle:checked ~ .menu-list {
       display: flex;
+      z-index: 1;
     }
 
     /* Estilos para submenús */
@@ -144,6 +145,7 @@
     /* Estilos para el botón de menú */
     .menu-toggle {
       display: none;
+      z-index: 1;
     }
 
     .menu-icon {
@@ -170,6 +172,7 @@
       position: static;
       top: 0;
       left: 0;
+
   }
   /* .menu-list {
     display: none;

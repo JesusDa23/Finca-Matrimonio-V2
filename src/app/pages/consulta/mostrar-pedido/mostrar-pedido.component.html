@@ -2,7 +2,7 @@
 <div class="fondo">
   <div class="container">
     <h2 class="titulo">Mis Datos</h2>
-    <div class="table-responsive" *ngIf="dataCliente && dataReserva">
+    <div class="table-responsive" *ngIf="dataCliente">
       <table class="table table-striped table-bordered">
         <thead class="thead-dark">
           <tr>
@@ -22,10 +22,10 @@
             <td>{{ dataCliente.cedula }}</td>
             <td>{{ dataCliente.email }}</td>
             <td>{{ dataCliente.telefono }}</td>
-            <td>{{ dataReserva.fechaReserva }}</td>
-            <td>{{ dataReserva.horaLlegada }}</td>
-            <td>{{ dataReserva.cantidadPersonas }}</td>
-            <td>{{ dataReserva.estado }}</td>
+            <td>{{ dataCliente.fechaReserva }}</td>
+            <td>{{ dataCliente.horaLlegada }}</td>
+            <td>{{ dataCliente.cantidadPersonas }}</td>
+            <td>{{ dataCliente.estado }}</td>
           </tr>
         </tbody>
       </table>

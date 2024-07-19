@@ -4,13 +4,14 @@
         <textarea formControlName="descripcion" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Describe aquí cómo quieres tu evento (cumpleaños, graduación, boda, etc.)"></textarea>
     </div>
 
-    <div class="mb-3">
-        <app-form-restaurante [mostrarBtnTotal]="false" (actualizarTotal)="actualizarTotalComida($event)"></app-form-restaurante>
+    <div class="menu">
+        <div class="mb-3">
+            <app-form-restaurante [mostrarBtnTotal]="false" (actualizarTotal)="actualizarTotalComida($event)"></app-form-restaurante>
+            <app-entradas (actualizarTotal)="recibirEntradas($event)"></app-entradas>
+        </div>
     </div>
 
-    <div class="mb-3">
-      <app-entradas (actualizarTotal)="recibirEntradas($event)"></app-entradas>
-    </div>
+
 
     <div class="btn-total">
         <div class="total-container">

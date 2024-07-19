@@ -1,62 +1,17 @@
-/* .fondo {
-    background-image: linear-gradient(
-    rgb(255, 255, 255),
-    rgba(255, 255, 255, 0.5)),
-    url('../../../../../assets/imagenes/fondo3.png');
-}
-
-
-h1 {
-    display: flex;
-    justify-content:center;
-    margin-top: .5em;
-    font-family: 'Reboto-Regular';
-    font-weight: bold;
-}
-
-.form-container {
-    max-width: 550px;
-    margin: 2em auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-family: 'Reboto-Regular';
-}
-
-.form-container .field {
-    margin-bottom: 15px;
-}
-
-.form-container .field label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    font-family: 'Reboto-Regular';
-}
-
-.form-container .field input {
-    width: 100%;
-    padding: 6px;
-    border: 1px solid #ccc;
+input {
     border-radius: 1em;
 }
 
-.form-container .error small {
+label {
+    display: block;
+    font-family: 'Reboto-Regular';
+    margin-left: .5em;
+    font-weight: bold;
+}
+
+.error {
     color: red;
     height: 1.4em;
     font-size: 0.9em;
     margin-left: 1em;
 }
-
-.modal-footer {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 20px;
-}
-
-button.btn.btn-primary {
-    width: 26%;
-    margin: 0 auto;
-} */

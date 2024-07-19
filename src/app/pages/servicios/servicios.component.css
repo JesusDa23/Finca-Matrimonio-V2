@@ -1,0 +1,15 @@
+.fondo {
+    background-image: linear-gradient(
+        rgb(255, 255, 255),
+        rgba(255, 255, 255, 0.5)),
+        url('../../../assets/imagenes/fondo3.png');
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin: .5em;
+    font-family: 'Reboto-Bold';
+    font-weight: bold;
+
+}

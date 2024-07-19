@@ -6,10 +6,6 @@
     justify-content:center;
     margin: 1em;
     gap: 3em;
-    background-image: linear-gradient(
-        rgb(255, 255, 255),
-        rgba(255, 255, 255, 0.5)),
-        url('../../../../assets/imagenes/fondo3.png');
     flex-wrap: wrap;
 }
 

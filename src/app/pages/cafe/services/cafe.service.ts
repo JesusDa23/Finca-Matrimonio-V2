@@ -1,26 +1,26 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CafeService {
 
-  urlApi = 'http://localhost:4000/api/cafe'
-  urlApi2 = 'http://localhost:4000/api/pedidocafe'
+  baseUrl: String = environment.baseUrl
 
   constructor(private http: HttpClient) { }
 
   obtenerCafe(){
-    return this.http.get(`${this.urlApi}`)
+    return this.http.get(`${this.baseUrl}/api/cafe`)
   }
 
   getCafeById( id: any ) {
-    return this.http.get(`${this.urlApi}/${ id }`)
+    return this.http.get(`${this.baseUrl}/api/cafe/${ id }`)
   }
 
   enviarPedidoCafe(pedido:any){
-    return this.http.post<any>(`${this.urlApi2}`,pedido)
+    return this.http.post<any>(`${this.baseUrl}/api/pedidocafe`,pedido)
 
   }
 

@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -7,14 +8,14 @@ import { Injectable } from '@angular/core';
 export class ObtenerMenuService {
 
 
-  baseUrl = 'http://localhost:4000/api'
+  baseUrl: String = environment.baseUrl
   constructor( private http: HttpClient  ) { }
 
   getMenu(){
-    return this.http.get<any>(`${this.baseUrl}/menu`)
+    return this.http.get<any>(`${this.baseUrl}/api/menu`)
   }
 
   guardarSeleccion(seleccion: any) {
-    return this.http.post<any>(`${this.baseUrl}/pedidos`, seleccion);
+    return this.http.post<any>(`${this.baseUrl}/api/pedidos`, seleccion);
   }
 }

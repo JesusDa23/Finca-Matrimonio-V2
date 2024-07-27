@@ -7,7 +7,7 @@
     
     <div class="container">
         <div class="cardService" *ngFor="let service of cafes.data; let i = index">
-            <div class="card" style="width: 22rem">
+            <div class="card">
               <img [src]="service.urlImagen" class="card-img-top" [alt]="service?.nombre" />
               <div class="card-body">
                 <h5 class="card-title">{{service.nombre}}</h5>

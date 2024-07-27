@@ -14,6 +14,7 @@ h2.title-coffe {
   padding: 3% 3%;
   font-family: 'Reboto-Bold';
   font-weight: bold;
+  text-align: center;
 }
 
 
@@ -73,6 +74,14 @@ h2.title-coffe {
     .card1 {
       padding: 1rem;
     }
+
+    .w-100{
+      height: 14rem;
+  }
+
+  p.contentidoCafe {
+    font-size: 17px;
+}
   }
     
     @media ( width<=768px ){
@@ -100,5 +109,9 @@ h2.title-coffe {
         font-size: 1.1em;
       
       }
+
+      .w-100{
+        height: 18rem;
+    }
   
   }  

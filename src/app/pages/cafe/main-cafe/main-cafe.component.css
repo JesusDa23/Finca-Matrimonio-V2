@@ -9,6 +9,7 @@ body{
 .container {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 h2.title-coffe {
@@ -27,6 +28,10 @@ p.contenido-cafe {
     margin-left: 7%;
     margin-bottom: 4%;
     font-family: 'Reboto-Regular';
+}
+
+.card {
+    width: 22rem;
 }
 
 .cardService {
@@ -65,3 +70,20 @@ a.btn.btn-primary {
     width: 62%;
     justify-content: center;
 }
+
+
+@media ( max-width: 768px ) {
+
+    .card {
+        width: 17rem;
+        height: 22rem;
+    }
+
+    h2.title-coffe{
+        padding: .6em;
+        text-align: center;
+        font-size: 23px;
+    }
+
+
+  }

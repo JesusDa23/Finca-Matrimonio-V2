@@ -18,3 +18,13 @@
     font-family: 'Reboto-Bold';
     font-weight: bold;
 }
+
+@media ( max-width: 768px ) {
+
+    .titulo-main p  {
+        padding: 0;
+        text-align: center;
+        font-size: 45px;
+    }
+
+  }

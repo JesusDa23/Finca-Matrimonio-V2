@@ -16,7 +16,7 @@ p.contenido-coffe {
   font-family: 'Reboto-Regular';
 }
 
-.quantity[_ngcontent-ng-c2786683902] {
+.quantity {
   margin: 25px;
   font-size: 20px;
 }
@@ -29,6 +29,11 @@ p.contenido-coffe {
   margin-left: 7%;
   margin-bottom: 4%
 }
+
+.card {
+  width: 22rem;
+}
+
 .card1.p-md-4.p-lg-5 {
   text-align: center;
 }
@@ -36,6 +41,7 @@ p.contenido-coffe {
 .container-card2 {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 h2.title-coffe {
@@ -158,4 +164,66 @@ a.btn.btn-primary {
   display: flex;
   width: 62%;
   justify-content: center;
+}
+
+@media ( max-width: 368px ) {
+
+.card {
+  width: 17rem;
+  height: 20rem;
+}
+
+.row.flex-md-row {
+  margin: 1em;
+}
+
+.col.col-md-6.col-one.container {
+  margin: .5em;
+}
+
+.comprar-button {
+  padding: 3px 15%;
+}
+
+h2.title-coffe {
+  font-size: 22px;
+  text-align: center;
+}
+
+}
+
+
+@media ( max-width: 768px ) {
+
+
+.row.flex-md-row {
+  margin: 1em;
+}
+  
+
+.col.col-md-6.col-one.container {
+  width: 26em;
+}
+
+.card {
+  width: 18rem;
+  height: 22rem;
+}
+
+h2.title-coffe {
+  font-size: 29px;
+  text-align: center;
+}
+
+.row.flex-md-row {
+  flex-direction: column;
+}
+
+.container-card2 {
+  flex-direction: column;
+}
+
+.quantity-controls{
+  padding: 1em;
+}
 }

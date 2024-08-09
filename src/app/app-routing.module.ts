@@ -17,21 +17,21 @@ import { CafeDetalleComponent } from './pages/cafe/cafe-detalle/cafe-detalle.com
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path:'/home', component: HomeComponent},
-  {path:'/servicios', component: ServiciosComponent},
-  {path:'/main-data', component: MainDataComponent},
-  {path:'/reservas', component: DatosReservaComponent},
-  {path:'/restaurante', component: FormRestauranteComponent},
-  {path:'/eventos', component: FormEventosComponent},
-  {path:'/camping', component: FormCampingComponent},
-  {path:'/entradas', component: EntradasComponent},
-  {path:'/platos', component: PlatosComponent},
-  {path:'/consulta', component:ConsultaComponent},
-  {path:'/mostrar', component:MostrarPedidoComponent},
-  {path:'/nosotros', component: NosotrosComponent},
-  {path:'/cafe', component: MainCafeComponent},
-  {path:'/cafe/detalle/:id', component: CafeDetalleComponent},
-  {path:'**', redirectTo: '/home'}
+  {path:'home', component: HomeComponent},
+  {path:'servicios', component: ServiciosComponent},
+  {path:'main-data', component: MainDataComponent},
+  {path:'reservas', component: DatosReservaComponent},
+  {path:'restaurante', component: FormRestauranteComponent},
+  {path:'eventos', component: FormEventosComponent},
+  {path:'camping', component: FormCampingComponent},
+  {path:'entradas', component: EntradasComponent},
+  {path:'platos', component: PlatosComponent},
+  {path:'consulta', component:ConsultaComponent},
+  {path:'mostrar', component:MostrarPedidoComponent},
+  {path:'nosotros', component: NosotrosComponent},
+  {path:'cafe', component: MainCafeComponent},
+  {path:'cafe/detalle/:id', component: CafeDetalleComponent},
+  {path:'**', redirectTo: 'home'}
 ];
 
 @NgModule({

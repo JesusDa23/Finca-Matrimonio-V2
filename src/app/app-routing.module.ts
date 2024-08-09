@@ -31,7 +31,7 @@ const routes: Routes = [
   {path:'/nosotros', component: NosotrosComponent},
   {path:'/cafe', component: MainCafeComponent},
   {path:'/cafe/detalle/:id', component: CafeDetalleComponent},
-  {path:'**', redirectTo: 'home'}
+  {path:'**', redirectTo: '/home'}
 ];
 
 @NgModule({

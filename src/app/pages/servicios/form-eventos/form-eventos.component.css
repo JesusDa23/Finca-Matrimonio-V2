@@ -3,17 +3,12 @@ form {
 }
 
 .title-event {
-    display: flex;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 23px;
-    margin-bottom: 1em;
-    font-family: 'Reboto-Bold';
+  font-size: 23px;
+  font-weight: bold;
 }
 
 textarea#exampleFormControlTextarea1 {
-    width: 74em;
-    margin: 0 auto;
+  width: 74em;
 }
 
 .btn-total {
@@ -24,7 +19,6 @@ textarea#exampleFormControlTextarea1 {
   border-radius: 10px;
   width: 74em;
   margin: 0 auto;
-  padding: 6px 12px;
 }
 
 .total-container {
@@ -46,4 +40,19 @@ textarea#exampleFormControlTextarea1 {
   font-weight: bold;
   color: #007bff; /* Color del monto */
   margin-bottom: 0em;
+}
+
+/* Estilos responsivos para dispositivos móviles */
+@media (max-width: 768px) {
+  .title-event {
+      font-size: 1.5rem; /* Ajusta el tamaño del texto en pantallas más pequeñas */
+  }
+
+  textarea#exampleFormControlTextarea1 {
+      width: 100%; /* Ajusta el ancho del textarea en pantallas más pequeñas */
+  }
+
+  .btn-total {
+      width: 100%; /* Ajusta el ancho del contenedor total en pantallas más pequeñas */
+  }
 }

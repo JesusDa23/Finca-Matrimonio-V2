@@ -1,22 +1,20 @@
-<form (submit)="onFormSubmit($event)" [formGroup]="datosEventos">
-    <p class="title-event">¿Cómo te gustaría que sea tu evento?</p>
-    <div class="mb-3">
-        <textarea formControlName="descripcion" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Describe aquí cómo quieres tu evento (cumpleaños, graduación, boda, etc.)"></textarea>
+<form (submit)="onFormSubmit($event)" [formGroup]="datosEventos" class="p-4 md:p-6">
+    <p class="title-event text-center text-lg md:text-2xl font-bold mb-4">¿Cómo te gustaría que sea tu evento?</p>
+    <div class="mb-4">
+        <textarea formControlName="descripcion" class="form-control w-full md:w-3/4 mx-auto" id="exampleFormControlTextarea1" rows="3" placeholder="Describe aquí cómo quieres tu evento (cumpleaños, graduación, boda, etc.)"></textarea>
     </div>
 
     <div class="menu">
-        <div class="mb-3">
+        <div class="mb-4">
             <app-form-restaurante [mostrarBtnTotal]="false" (actualizarTotal)="actualizarTotalComida($event)"></app-form-restaurante>
             <app-entradas (actualizarTotal)="recibirEntradas($event)"></app-entradas>
         </div>
     </div>
 
-
-
-    <div class="btn-total">
-        <div class="total-container">
-            <p class="total-label">Total del evento:</p>
-            <p class="total-amount">{{ calcularTotal() }}</p>
+    <div class="btn-total flex flex-col md:flex-row justify-between items-center border border-gray-300 rounded-lg p-2 mx-auto w-full md:w-3/4">
+        <div class="total-container flex items-center">
+            <p class="total-label font-semibold text-base md:text-lg">Total del evento:</p>
+            <p class="total-amount text-blue-500 font-semibold text-base md:text-lg ml-2">{{ calcularTotal() }}</p>
         </div>
         <app-total-pago (pagar)="onPagar()"></app-total-pago>
     </div>

@@ -13,6 +13,7 @@ import Swal from 'sweetalert2';
 })
 export class MainDataComponent {
 
+  KeySecurity:string = '_<\{+EfgIb^}4xr@=;R$zX-QCD8W>|AvpG3&BiT7H,cFohL|SO%(sV].lZ1dq0(yk!Mm9weN2PUJ]a?jtKY*u#56n:['
 
   constructor(
     private formBuilder: FormBuilder,
@@ -46,6 +47,7 @@ export class MainDataComponent {
               response => {
                   if (response.ok) {
                     localStorage.setItem('cedula', this.mainData.get('cedula')?.value);
+                    sessionStorage.setItem('llave', this.KeySecurity  )
                     this.mostrarOtroForm();
                   } else {
                       Swal.fire({

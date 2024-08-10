@@ -14,6 +14,7 @@ import { DatosReservaComponent } from './pages/servicios/main-data/datos-reserva
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { MainCafeComponent } from './pages/cafe/main-cafe/main-cafe.component';
 import { CafeDetalleComponent } from './pages/cafe/cafe-detalle/cafe-detalle.component';
+import { guardGuard } from './guads/guard.guard';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -21,11 +22,9 @@ const routes: Routes = [
   {path:'servicios', component: ServiciosComponent},
   {path:'main-data', component: MainDataComponent},
   {path:'reservas', component: DatosReservaComponent},
-  {path:'restaurante', component: FormRestauranteComponent},
-  {path:'eventos', component: FormEventosComponent},
-  {path:'camping', component: FormCampingComponent},
-  {path:'entradas', component: EntradasComponent},
-  {path:'platos', component: PlatosComponent},
+  {path:'restaurante', canMatch: [guardGuard], component: FormRestauranteComponent},
+  {path:'eventos',canMatch: [guardGuard], component: FormEventosComponent},
+  {path:'camping',canMatch: [guardGuard], component: FormCampingComponent},
   {path:'consulta', component:ConsultaComponent},
   {path:'mostrar', component:MostrarPedidoComponent},
   {path:'nosotros', component: NosotrosComponent},

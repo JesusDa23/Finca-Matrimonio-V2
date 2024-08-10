@@ -76,7 +76,7 @@
 
   <div class="modal-footer">
     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-    <button type="button"  (click)="enviarReserva()"  class="btn btn-primary" data-bs-dismiss="modal"  >Continuar</button>
+    <button type="button"  (click)="enviarReserva()"  class="btn btn-primary" data-bs-dismiss="modal"  [disabled]="mainData.invalid" >Continuar</button>
 
   </div>
 </form>

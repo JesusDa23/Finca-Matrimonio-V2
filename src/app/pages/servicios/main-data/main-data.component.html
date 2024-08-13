@@ -17,6 +17,7 @@
     <div class="error">
       <div *ngIf="mainData.get('cedula')?.invalid && (mainData.get('cedula')?.dirty || mainData.get('cedula')?.touched)">
         <small *ngIf="mainData.get('cedula')?.errors?.['required']">El número de documento es requerido</small>
+        <small *ngIf="mainData.get('cedula')?.errors?.['minlength']">El campo requiere mínimo 6 caracteres</small>
       </div>
     </div>
   </div>
@@ -27,6 +28,7 @@
     <div class="error">
       <div *ngIf="mainData.get('email')?.invalid && (mainData.get('email')?.dirty || mainData.get('email')?.touched)">
         <small *ngIf="mainData.get('email')?.errors?.['required']">El email es requerido</small>
+        <small *ngIf="mainData.get('email')?.errors?.['email']">Ingrese un formato de email valido</small>
       </div>
     </div>
   </div>
@@ -37,6 +39,7 @@
     <div class="error">
       <div *ngIf="mainData.get('telefono')?.invalid && (mainData.get('telefono')?.dirty || mainData.get('telefono')?.touched)">
         <small *ngIf="mainData.get('telefono')?.errors?.['required']">El telefono es requerido</small>
+        <small *ngIf="mainData.get('telefono')?.errors?.['minlength']">El campo requiere mínimo 10 caracteres</small>
       </div>
     </div>
   </div>

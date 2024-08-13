@@ -1,17 +1,24 @@
 .error {
     color: red;
     height: 1.4em;
+    font-size: 14px;
+}
+
+.fondo {
+  background-image: linear-gradient(
+      rgb(255, 255, 255),
+      rgba(255, 255, 255, 0.5)),
+      url('../../../assets/imagenes/fondo3.png');
 }
 
 .container {
-    max-width: 35em;
+    max-width: 27em;
     margin: 2em auto;
     padding: 2em;
-    background-color: #f8f9fa;
+    background-color: #e8e8e89c;
     border: 1px solid #e9ecef;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
   }
   
   h1 {
@@ -19,6 +26,7 @@
     font-family: 'Reboto-Bold';
     font-weight: bold;
     font-size: 2em;
+    margin-top: 1em;
   }
   
   .consulta-form {
@@ -35,16 +43,21 @@
     color: #dc3545;
   }
   
+  .boton {
+    display: flex;
+    justify-content: center;
+  }
+
   .btn-primary {
-    background-color: #007bff;
+    background-color: #379053;
     color: #ffffff;
     border: none;
     cursor: pointer;
     border-radius: 5px;
     font-size: .9em;
+    padding: .5em 4em;
   }
   
   .btn-primary:hover {
-    background-color: #0056b3;
+    background-color: #85b594;
   }
-  

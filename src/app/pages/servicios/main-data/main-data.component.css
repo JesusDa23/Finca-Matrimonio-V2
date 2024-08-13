@@ -20,3 +20,8 @@ label {
     font-size: 0.9em;
     margin-left: 1em;
 }
+
+button.btn.btn-primary {
+    background-color: #379053;
+    border: 1px solid #379053;
+}

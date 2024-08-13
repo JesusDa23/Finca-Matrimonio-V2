@@ -26,6 +26,6 @@ export class BotonesConsultaService {
     }
 
     cancelarCamping(cedula: any): Observable<any> {
-      return this.http.delete(`${this.baseUrl}/pedidoscamping/${cedula}`);
+      return this.http.delete(`${this.baseUrl}/pedidocamping/${cedula}`);
     }
 }

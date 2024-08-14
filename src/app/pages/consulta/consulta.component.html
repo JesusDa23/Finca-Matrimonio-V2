@@ -1,18 +1,20 @@
-<div class="container">
-  <h1>Consulta tu reserva</h1>
-
-  <form [formGroup]="numeroIdentificacion" class="consulta-form">
-      <div class="form-group">
-          <label for="">Numero de identificacion:</label>
-          <input id="cedula" type="text" class="form-control" formControlName="cedula">
-          <div class="error">
-              <div *ngIf="numeroIdentificacion.get('cedula')?.invalid && (numeroIdentificacion.get('cedula')?.dirty || numeroIdentificacion.get('cedula')?.touched)">
-                <small *ngIf="numeroIdentificacion.get('cedula')?.errors?.['required']">El número de documento es requerido</small>
+<div class="fondo">
+  <h1>¿Tienes una reserva?</h1>
+  <div class="container">
+    <form [formGroup]="numeroIdentificacion" class="consulta-form">
+        <div class="form-group">
+            <label for="">Numero de identificacion:</label>
+            <input id="cedula" type="text" class="form-control" formControlName="cedula">
+            <div class="error">
+                <div *ngIf="numeroIdentificacion.get('cedula')?.invalid && (numeroIdentificacion.get('cedula')?.dirty || numeroIdentificacion.get('cedula')?.touched)">
+                  <small *ngIf="numeroIdentificacion.get('cedula')?.errors?.['required']">El número de documento es requerido</small>
+                </div>
               </div>
-            </div>
-      </div>
-      <button class="btn btn-primary" (click)="enviarConsulta()">Consultar</button>
-  </form>
+        </div>
+        <div class="boton">
+          <button class="btn btn-primary" (click)="enviarConsulta()">Consultar </button>
+        </div>
+    </form>
+  </div>
 </div>
-
 

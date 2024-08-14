@@ -26,9 +26,9 @@ export class MainDataComponent {
 
   mainData: FormGroup = this.formBuilder.group({
     nombre: ['', [Validators.required, Validators.minLength(2)]],
-    cedula: ['', [Validators.required]],
-    email: ['', [Validators.required]],
-    telefono: ['', [Validators.required]],
+    cedula: ['', [Validators.required, Validators.minLength(6)]],
+    email: ['', [Validators.required, Validators.email]],
+    telefono: ['', [Validators.required, Validators.minLength(10)]],
     fechaReserva: ['', [Validators.required]],
     horaLlegada: ['', [Validators.required]],
     cantidadPersonas: ['', [Validators.required, Validators.min(1)]],

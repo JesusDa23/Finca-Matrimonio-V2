@@ -94,6 +94,11 @@
 
   /* Estilos para dispositivos móviles */
   @media screen and (max-width: 767px) {
+
+    header.header {
+      padding: 0px 0rem;
+    }
+
     /* Disposición vertical */
     .menu {
       flex-direction: column;

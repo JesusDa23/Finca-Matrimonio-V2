@@ -39,12 +39,19 @@ p.card-text {
     height: auto;
 }
 
+
 a.btn.btn-primary {
     display: flex;
     width: 62%;
     justify-content: center;
     font-family: 'Reboto-Regular';
 }
+
+button.btn.btn-primary {
+    background-color: #379053;
+    border: none;
+}
+
 
 
 @media ( max-width: 576px ) {

@@ -1,7 +1,7 @@
 <body>
-    <app-encabezado></app-encabezado>
+    <app-encabezado ></app-encabezado>
 
-  <section >
+  <section id="mi-seccion" >
     <div class="row flex-md-row">
         <div class="col col-md-6 col-one container">
             <div class="carousel-inner">
@@ -15,15 +15,16 @@
           <div class="card1 p-md-4 p-lg-5">
             <h2 class="title-coffe">{{ cafe?.nombre }}</h2>
             <p class="contenido-coffe" >{{ cafe?.descripcion }}</p>
-
-            <!-- Botones para sumar y restar -->
-            <div class="quantity-controls">
+              <div class="quantity-controls">
               <button class="quantity-button-1" (click)="restarCantidad()">-</button>
               <span class="quanjtity">{{ cantidad }}</span>
               <button class="quantity-button-2" (click)="sumarCantidad()" >+</button>
             </div>
               
-          <div class="precio"><h4>Precio total: {{resultado}} </h4> </div>      
+          <div class="precio">
+            <h4>Precio total: </h4>
+            <P class="resultado">$ {{resultado}} </P>
+           </div>      
           <div class="botonComprar"> <button class="comprar-button" (click)="mensajePagar()"> Comprar ahora </button> </div>
         </div>
 
@@ -33,7 +34,7 @@
     
   </section>
 
-  <h2 class="title-coffe">OTROS PRODUCTOS RELACIONADOS</h2>
+  <h2 class="title-coffe" id="mi-seccion2">OTROS PRODUCTOS RELACIONADOS</h2>
   
     <div class="container-card2">
         <div class="cardService"  *ngFor="let service of cafes.data; let i = index">
@@ -42,7 +43,7 @@
               <div class="card-body">
                 <h5 class="card-title">{{service.nombre}}</h5>
                 <p class="card-text">${{service.precio}}</p>
-                <button class="btn btn-primary"[routerLink]="['/cafe/detalle/', service._id]" >Seleccionar</button>
+                <button (click)="scrollToSection('mi-seccion')" class="btn btn-primary"[routerLink]="['/cafe/detalle/', service._id]" >Seleccionar</button>
               </div>
             </div>
           </div>

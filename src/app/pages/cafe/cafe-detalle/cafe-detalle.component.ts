@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CafeService } from '../services/cafe.service';
 import Swal from 'sweetalert2';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-cafe-detalle',
@@ -9,17 +10,21 @@ import Swal from 'sweetalert2';
   styleUrl: './cafe-detalle.component.css'
 })
 
+
 export class CafeDetalleComponent {
   cafe: any;
   cafes: any;
-  resultado: any;
+  resultado: number = 0;
 
   constructor(
     private cafeService: CafeService,
     private activatedRoute: ActivatedRoute,
+    private viewportScroller: ViewportScroller,
 
   ){}
   cantidad: number = 0;
+
+
 
 sumarCantidad() {
   this.cantidad++;
@@ -32,6 +37,8 @@ restarCantidad() {
     this.resultado = this.cafe.precio * this.cantidad
   }
 }
+
+
 
   ngOnInit(){
 
@@ -47,6 +54,10 @@ restarCantidad() {
         
       })
     })
+  }
+  
+  scrollToSection(sectionId: string): void {
+    this.viewportScroller.scrollToAnchor(sectionId);
   }
 
   mensajePagar(){

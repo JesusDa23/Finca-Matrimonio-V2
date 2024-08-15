@@ -1,8 +1,9 @@
 body{
     background-image: linear-gradient(
-    rgb(255, 255, 255),
+    rgb(255, 255, 255, 0.5),
     rgba(255, 255, 255, 0.5)),
     url(../../../../assets/imagenes/cafe-fondo.png);
+    size: 100%;
 
 }
 
@@ -37,8 +38,8 @@ p.contenido-cafe {
 .cardService {
     display: flex;
     justify-content:center;
-    margin: 1em;
-    gap: 3em;
+    margin: .5em;
+  
 }
 
 .card-body {
@@ -71,6 +72,15 @@ a.btn.btn-primary {
     justify-content: center;
 }
 
+.btn {
+    background-color: #379053;
+    color: #fff;
+    border: none;
+
+}
+.btn:hover{
+    background-color: #85b594;
+}
 
 @media ( max-width: 768px ) {
 

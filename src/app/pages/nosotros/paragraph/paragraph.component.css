@@ -16,13 +16,17 @@ iframe.video_historia {
     height: 25vw;
 }
 
-.content { 
+.content {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 0 5rem 0 0;
 }
 
+.content-history{
+  display: flex;
+  padding: 2em;
+}
 
 @media (width <= 768px)
 {
@@ -54,6 +58,7 @@ iframe.video_historia {
     iframe.video_historia {
         width: 70vw;
         height: 43vw;
+        margin-top: 1em;
     }
 
 

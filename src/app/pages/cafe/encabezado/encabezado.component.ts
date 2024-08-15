@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrl: './encabezado.component.css'
 })
 export class EncabezadoComponent {
+constructor(private viewportScroller: ViewportScroller){
 
 }
+
+scrollToSection(sectionId: string): void {
+  this.viewportScroller.scrollToAnchor(sectionId);
+}
+
+}
+ 

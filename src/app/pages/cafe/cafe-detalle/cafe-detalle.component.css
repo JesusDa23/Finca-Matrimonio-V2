@@ -20,6 +20,20 @@ p.contenido-coffe {
   margin: 25px;
   font-size: 20px;
 }
+.btn {
+  background-color: #379053;
+  color: #fff;
+  border: none;
+
+}
+.btn:hover{
+  background-color: #85b594;
+}
+
+p.resultado {
+  height: 1em;
+  font-size: 20px;
+}
 
 .row.flex-md-row {
   display: flex;
